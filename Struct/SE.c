@@ -6,7 +6,7 @@ struct Books{
     char subject[50];
     int book_id;
 };
-
+void printBooks(struct Books *books);
 int main(void){
 
     struct Books Book1;
@@ -23,17 +23,17 @@ int main(void){
     strcpy(Book2.subject,"C programming");
     Book2.book_id = 0002;
 
-    printf("Boo1 title : %s\n",Book1.title);
-    printf("Boo1 author : %s\n",Book1.author);
-    printf("Boo1 subject : %s\n",Book1.subject);
-    printf("Boo1 id : %d\n",Book1.book_id);
-    
-    printf("Boo2 title : %s\n",Book2.title);
-    printf("Boo2 author : %s\n",Book2.author);
-    printf("Boo2 subject : %s\n",Book2.subject);
-    printf("Boo2 id : %d\n",Book2.book_id);
-
+    printBooks( &Book1 );
+    printBooks( &Book2 );
 
 
     return 0;
+}
+
+void printBooks(struct Books *book)
+{
+    printf("Book title : %s\n", book->title);
+    printf("Book author : %s\n", (*book).author);
+    printf("Book subject : %s\n", (*book).subject);
+    printf("Book id : %d\n", book->book_id);
 }
