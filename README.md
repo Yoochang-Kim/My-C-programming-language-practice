@@ -1,5 +1,5 @@
 # My-C-programming-language-practice
-Practice C programming language 
+Review C programming language   
 
 [reference]   
 1.tutorials point:https://www.tutorialspoint.com/cprogramming/index.htm,   
