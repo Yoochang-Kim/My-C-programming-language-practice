@@ -24,10 +24,10 @@ int (*p[4])(int, int) = {Sum,Sub,Mul,Div};
 </code>
 </pre>
 
-'''
+```C
 //함수 호출 후 반환되는 결과 값을 저장하기 위한 배열
 int result[4], i;   
-'''   
+```    
 ₩₩₩
 //반복문을 사용하여 함수 호출 후 배열 result에 반환되는 값 저장
 for(i = 0; i< 4; i++) result[i] = (*p[i])(8,2);   
