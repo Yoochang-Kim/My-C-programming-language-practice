@@ -19,14 +19,20 @@ r4 = Div(3,5); -> r4에는 값 1
 하지만, 함수 포인터 배열을 사용하면 각각의 포인터들은 함수의 주소값을 가지고 있고 함수들을 연속해서 호출하고 싶을 때   
 반복문을 사용해서 코드를 단순화 시킬 수 있다.   
 int (*p[4])(int, int) = {Sum,Sub,Mul,Div};   
-> 함수 호출 후 반환되는 결과 값을 저장하기 위한 배열
+₩₩₩
+//함수 호출 후 반환되는 결과 값을 저장하기 위한 배열
 int result[4], i;   
->반복문을 사용하여 함수 호출 후 배열 result에 반환되는 값 저장
+₩₩₩   
+₩₩₩
+//반복문을 사용하여 함수 호출 후 배열 result에 반환되는 값 저장
 for(i = 0; i< 4; i++) result[i] = (*p[i])(8,2);   
+₩₩₩   
 
->typedef 문법으로 코드 단순화 시킬 수 있다 
+₩₩₩
+//typedef 문법으로 코드 단순화 시킬 수 있다 
 typedef int (*OPERATION_TYPE)(int, int);   
-OPERATION_TYPE p[4] = {Sum,Sub,Mul,Div};   >int (*p[4])(int,int) = {Sum,Sub,Mul,Div};
+OPERATION_TYPE p[4] = {Sum,Sub,Mul,Div};   //int (*p[4])(int,int) = {Sum,Sub,Mul,Div};
+₩₩₩   
 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ   
 P  |     &Sum      |   &Sub         |      &Mul       |      &Div      |   
 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
